@@ -1,4 +1,17 @@
 # MastermindGame
+
+## Execution Instructions
+### 1. Navigate to the Project Directory
+Ensure you are inside the `MastermindGame` directory. If not, run:
+### 1. Navigate to the Project Directory
+Ensure you are inside the `MastermindGame` directory. If not, run:
+cd MastermindGame
+### 2. Run the Game
+dotnet run --project MastermindGame
+### 3. Run Unit Tests
+cd MastermindGame.Tests
+dotnet test
+
 ## Programming Exercise
 Create a C# console application that is a simple version of Mastermind.  
 The randomly generated answer should be four (4) digits in length, with each digit ranging from 1 to 6.  
