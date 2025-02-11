@@ -20,7 +20,7 @@ namespace MastermindGame
             {
                 Console.Write($"Attempt {11 - attemptsLeft}: Enter your guess: ");
 
-                string guess = Console.ReadLine();
+                string guess = Console.ReadLine()!;
                 while (!IsValidGuess(guess))
                 {
                     Console.WriteLine("Invalid input. Please enter exactly 4 digits between 1 and 6.");
@@ -82,7 +82,7 @@ namespace MastermindGame
         public static string GetHint(string secret, string guess)
         {
             int plusCount = CalculateExactMatches(secret, guess);
-            int minusCount = CalculateCorrectDigitsInWrongPositions(secret, guess, plusCount);
+            int minusCount = CalculateCorrectDigitsInWrongPositions(secret, guess);
             return new string('+', plusCount) + new string('-', minusCount);
         }
 
