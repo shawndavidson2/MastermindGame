@@ -8,6 +8,7 @@ Ensure you are inside the `MastermindGame` directory. If not, run:
 `dotnet run --project MastermindGame`
 ### 3. Run Unit Tests
 `cd MastermindGame.Tests`
+
 `dotnet test`
 
 ## Programming Exercise
