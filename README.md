@@ -3,12 +3,12 @@
 ## Execution Instructions
 ### 1. Navigate to the Project Directory
 Ensure you are inside the `MastermindGame` directory. If not, run:
-cd MastermindGame
+`cd MastermindGame`
 ### 2. Run the Game
-dotnet run --project MastermindGame
+`dotnet run --project MastermindGame`
 ### 3. Run Unit Tests
-cd MastermindGame.Tests
-dotnet test
+`cd MastermindGame.Tests`
+`dotnet test`
 
 ## Programming Exercise
 Create a C# console application that is a simple version of Mastermind.  
