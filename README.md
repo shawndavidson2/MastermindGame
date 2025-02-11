@@ -3,8 +3,6 @@
 ## Execution Instructions
 ### 1. Navigate to the Project Directory
 Ensure you are inside the `MastermindGame` directory. If not, run:
-### 1. Navigate to the Project Directory
-Ensure you are inside the `MastermindGame` directory. If not, run:
 cd MastermindGame
 ### 2. Run the Game
 dotnet run --project MastermindGame
