@@ -25,7 +25,7 @@ namespace MastermindGame
                 {
                     Console.WriteLine("Invalid input. Please enter exactly 4 digits between 1 and 6.");
                     Console.Write($"Attempt {11 - attemptsLeft}: Enter your guess: ");
-                    guess = Console.ReadLine();
+                    guess = Console.ReadLine()!;
                 }
 
                 string hint = GetHint(secret, guess);
