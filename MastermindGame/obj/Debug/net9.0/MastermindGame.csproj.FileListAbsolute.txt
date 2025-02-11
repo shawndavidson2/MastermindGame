@@ -1,13 +1,11 @@
+/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.csproj.CoreCompileInputs.cache
+/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.sourcelink.json
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/bin/Debug/net9.0/MastermindGame
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/bin/Debug/net9.0/MastermindGame.deps.json
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/bin/Debug/net9.0/MastermindGame.runtimeconfig.json
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/bin/Debug/net9.0/MastermindGame.dll
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/bin/Debug/net9.0/MastermindGame.pdb
-/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.GeneratedMSBuildEditorConfig.editorconfig
-/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.AssemblyInfoInputs.cache
-/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.AssemblyInfo.cs
-/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.csproj.CoreCompileInputs.cache
-/Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.sourcelink.json
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.dll
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/refint/MastermindGame.dll
 /Users/shawndavidson/Desktop/QuadaxMastermindGame/MastermindGame/MastermindGame/obj/Debug/net9.0/MastermindGame.pdb
