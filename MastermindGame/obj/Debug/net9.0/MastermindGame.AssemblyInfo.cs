@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MastermindGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ab5b538ff715314efcf7f6181fccfd949e0ffd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7df7ffaa8d58df06112df9b15331b83dc2e173b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MastermindGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MastermindGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
