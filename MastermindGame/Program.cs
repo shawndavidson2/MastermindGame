@@ -114,31 +114,23 @@ namespace MastermindGame
         */
         private static int CalculateCorrectDigitsInWrongPositions(string secret, string guess)
         {
-            // Remove exact matches from consideration
-            List<char> remainingSecret = new List<char>();
-            List<char> remainingGuess = new List<char>();
+            var secretFreq = new Dictionary<char, int>();
+            int minusCount = 0;
 
+            // Count frequency of non-matching secret digits
             for (int i = 0; i < secret.Length; i++)
             {
                 if (secret[i] != guess[i])
-                {
-                    remainingSecret.Add(secret[i]);
-                    remainingGuess.Add(guess[i]);
-                }
+                    secretFreq[secret[i]] = secretFreq.GetValueOrDefault(secret[i], 0) + 1;
             }
 
-            // Calculate frequency of remaining characters in secret
-            Dictionary<char, int> secretFrequency = remainingSecret
-                .GroupBy(c => c)
-                .ToDictionary(g => g.Key, g => g.Count());
-
-            int minusCount = 0;
-            foreach (char c in remainingGuess)
+            // Check non-matching guess digits against secret frequencies
+            for (int i = 0; i < guess.Length; i++)
             {
-                if (secretFrequency.ContainsKey(c) && secretFrequency[c] > 0)
+                if (secret[i] != guess[i] && secretFreq.GetValueOrDefault(guess[i], 0) > 0)
                 {
                     minusCount++;
-                    secretFrequency[c]--;
+                    secretFreq[guess[i]]--;
                 }
             }
 
