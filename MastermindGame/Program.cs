@@ -28,8 +28,17 @@ namespace MastermindGame
                     guess = Console.ReadLine();
                 }
 
+                string hint = GetHint(secret, guess);
+                if (hint == "++++")
+                {
+                    Console.WriteLine("Congratulations! You've won!");
+                    return;
+                }
+                Console.WriteLine("Hint: " + hint);
+
                 --attemptsLeft;
             }
+            Console.WriteLine($"You've lost. The correct code was: {secret}");
         }
 
         /**
@@ -60,6 +69,80 @@ namespace MastermindGame
         public static bool IsValidGuess(string guess)
         {
             return guess.Length == 4 && guess.All(c => c >= '1' && c <= '6');
+        }
+
+        /** 
+        * Generates the hint based on the player's guess and the secret code
+        *
+        * @param secret The secret code as a string of digits
+        * @param guess The player's guess as a string of digits
+        *
+        * @return A string representing the hint, consisting of '+' and '-'
+        */
+        public static string GetHint(string secret, string guess)
+        {
+            int plusCount = CalculateExactMatches(secret, guess);
+            int minusCount = CalculateCorrectDigitsInWrongPositions(secret, guess, plusCount);
+            return new string('+', plusCount) + new string('-', minusCount);
+        }
+
+        /**
+        * Calculates the number of exact matches, where the guessed digit is in the correct position
+        *
+        * @param secret The secret code as a string of digits
+        * @param guess The player's guess as a string of digits
+        *
+        * @return The number of correct digits in the correct position
+        */
+        private static int CalculateExactMatches(string secret, string guess)
+        {
+            int count = 0;
+            for (int i = 0; i < secret.Length; i++)
+            {
+                if (secret[i] == guess[i]) count++;
+            }
+            return count;
+        }
+
+        /**
+        * Calculates the number of correct digits that are in the wrong positions
+        *
+        * @param secret The secret code as a string of digits
+        * @param guess The player's guess as a string of digits
+        *
+        * @return The number of correct digits that are in the wrong positions
+        */
+        private static int CalculateCorrectDigitsInWrongPositions(string secret, string guess)
+        {
+            // Remove exact matches from consideration
+            List<char> remainingSecret = new List<char>();
+            List<char> remainingGuess = new List<char>();
+
+            for (int i = 0; i < secret.Length; i++)
+            {
+                if (secret[i] != guess[i])
+                {
+                    remainingSecret.Add(secret[i]);
+                    remainingGuess.Add(guess[i]);
+                }
+            }
+
+            // Calculate frequency of remaining characters in secret
+            Dictionary<char, int> secretFrequency = remainingSecret
+                .GroupBy(c => c)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            int minusCount = 0;
+            foreach (char c in remainingGuess)
+            {
+                if (secretFrequency.ContainsKey(c) && secretFrequency[c] > 0)
+                {
+                    minusCount++;
+                    secretFrequency[c]--;
+                }
+            }
+
+            return minusCount;
         }
     }
 }
